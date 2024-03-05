@@ -1,5 +1,5 @@
 # SpriteTrail2D
-A Godot 4 version of `SpriteTrail` addon made by *Luiz Lopes* for Godot 3.X (Thanks for making the addon!)
+A Godot 4 version of `SpriteTrail` addon made by *Luiz Lopes* for Godot 3.X
 
 *Checkout the original repo:*
 https://github.com/luizcarlos1405/SpriteTrail
