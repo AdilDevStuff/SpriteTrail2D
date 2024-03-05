@@ -108,10 +108,12 @@ func spawn_copy(delta: int, parent: Node2D) -> void:
 	# This is needed because the draw transform's scale is set to -1 on the flip
 	# direction when the sprite is flipped
 	var transform_scale: = Vector2(1, 1)
-	if parent.flip_h:
-		transform_scale.x = -1
-	if parent.flip_v:
-		transform_scale.y = -1
+	
+	## HACK: Removing these if statements fix some weird positioning of the trail
+	#if parent.flip_h:
+		#transform_scale.x = -1
+	#if parent.flip_v:
+		#transform_scale.y = -1
 
 	var trail_copy: = {
 		global_position = copy_position,

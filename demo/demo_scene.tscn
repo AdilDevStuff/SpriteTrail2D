@@ -1,11 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://t4cgrskv8kes"]
+[gd_scene load_steps=4 format=3 uid="uid://t4cgrskv8kes"]
 
 [ext_resource type="Texture2D" uid="uid://b6ex8jymlenkd" path="res://icon.png" id="1_dkjjb"]
 [ext_resource type="Script" path="res://demo/demo_scene.gd" id="1_u3jcd"]
+[ext_resource type="Script" path="res://addons/sprite_trail_2d/src/SpriteTrail2D.gd" id="2_a1fun"]
 
 [node name="Demo" type="Node2D"]
 script = ExtResource("1_u3jcd")
+speed = 860
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(565, 326)
 texture = ExtResource("1_dkjjb")
+
+[node name="SpriteTrail2D" type="Node2D" parent="Sprite2D"]
+show_behind_parent = true
+script = ExtResource("2_a1fun")
+life_time = 1.0
+copy_period = 0.1
