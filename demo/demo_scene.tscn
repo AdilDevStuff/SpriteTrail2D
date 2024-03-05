@@ -9,11 +9,10 @@ script = ExtResource("1_u3jcd")
 speed = 860
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(565, 326)
+position = Vector2(570, 324)
 texture = ExtResource("1_dkjjb")
 
 [node name="SpriteTrail2D" type="Node2D" parent="Sprite2D"]
 show_behind_parent = true
 script = ExtResource("2_a1fun")
-life_time = 1.0
-copy_period = 0.1
+active = true

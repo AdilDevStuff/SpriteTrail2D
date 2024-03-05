@@ -14,7 +14,7 @@ enum _ProcessMode {PROCESS, PHYSICS_PROCESS}
 @export var active: bool = false: set = set_active, get = get_active
 @export var life_time: = 0.6
 @export var fake_velocity: = Vector2(0, 0)
-@export var copy_period: = 0.2
+@export var spawn_interval: = 0.2
 @export var gradient: Gradient
 @export var behind_parent: = true: set = set_behind_parent, get = get_behind_parent
 @export var _process_mode: _ProcessMode = _ProcessMode.PROCESS: set = set_process_mode, get = get_process_mode
@@ -129,7 +129,7 @@ func update_trail(delta: float, parent: Node2D) -> void:
 
 	process_copies(delta)
 
-	if _elapsed_time > copy_period and active:
+	if _elapsed_time > spawn_interval and active:
 		spawn_copy(delta, parent)
 		_elapsed_time = 0.0
 
