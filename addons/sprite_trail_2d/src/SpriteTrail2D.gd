@@ -12,11 +12,14 @@ extends Node2D
 enum _ProcessMode {PROCESS, PHYSICS_PROCESS}
 
 @export var active: bool = false: set = set_active, get = get_active
-@export var life_time: = 0.6
-@export var fake_velocity: = Vector2(0, 0)
-@export var spawn_interval: = 0.2
-@export var gradient: Gradient
-@export var behind_parent: = true: set = set_behind_parent, get = get_behind_parent
+@export var life_time: = 0.6 ## Lifetime of the trail, determines how long the trail will be shown before removing.
+@export var fake_velocity: = Vector2(0, 0) ## Velocity for making the trail move without moving the parent.
+@export var spawn_interval: = 0.2 ## Time interval between spawning each trail. Higher values will spawn less trails and vice versa.
+@export var gradient: Gradient ## Gradient texture for adding multiple colors to the trail or making it fade out.
+@export var behind_parent: = true: set = set_behind_parent, get = get_behind_parent ## If true, shows the trail behind parent otherwise show on top.
+
+## It provides flexibility in how often the trail effect is updated, allowing you to optimize performance
+## or prioritize visual smoothness depending on your game's requirements.
 @export var _process_mode: _ProcessMode = _ProcessMode.PROCESS: set = set_process_mode, get = get_process_mode
 
 var _trail_copies: = []
