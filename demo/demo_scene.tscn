@@ -1,18 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://t4cgrskv8kes"]
+[gd_scene load_steps=5 format=3 uid="uid://t4cgrskv8kes"]
 
 [ext_resource type="Texture2D" uid="uid://b6ex8jymlenkd" path="res://icon.png" id="1_dkjjb"]
 [ext_resource type="Script" path="res://demo/demo_scene.gd" id="1_u3jcd"]
 [ext_resource type="Script" path="res://addons/sprite_trail_2d/src/SpriteTrail2D.gd" id="2_a1fun"]
+
+[sub_resource type="Gradient" id="Gradient_p70l1"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
 
 [node name="Demo" type="Node2D"]
 script = ExtResource("1_u3jcd")
 speed = 860
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(570, 324)
+position = Vector2(599, 318)
 texture = ExtResource("1_dkjjb")
 
 [node name="SpriteTrail2D" type="Node2D" parent="Sprite2D"]
 show_behind_parent = true
 script = ExtResource("2_a1fun")
 active = true
+spawn_interval = 0.01
+gradient = SubResource("Gradient_p70l1")
+_process_mode = 1

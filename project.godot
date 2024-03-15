@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="SpriteTrail2D"
+config/tags=PackedStringArray("addon")
 run/main_scene="res://demo/demo_scene.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
